@@ -1,21 +1,39 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title></title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css">
-    <link rel="stylesheet" href="assets/css/master.css">
-  </head>
-  <body>
-    <div class="container">
-      <div class="row justify-content-center pads">
-        <div class="col-10 text-center">
+    <head>
+        <meta charset="utf-8">
+        <title>ex-dischi-musicali</title>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.1.2/handlebars.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="assets/css/style.css">
+    </head>
+    <body>
+        <header>
+            <div class="container">
+                <img src="assets/img/logo.png" alt="logo" />
+            </div>
+        </header>
+
+        <div id='albums' class="cds-container container">
+            <!-- Disco ad esempio -->
+            <!-- <div class="cd">
+                <img src="https://upload.wikimedia.org/wikipedia/en/9/9f/Ten_Summoner%27s_Tales.jpg" alt="">
+                <h3>Ten's Summoners Tales</h3>
+                <span class="author">Sting</span>
+                <span class="year">1993</span>
+            </div> -->
         </div>
-      </div>
-    </div>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <script src="assets/js/myscript.js" charset="utf-8"></script>
-  </body>
+        
+        <script id="hb-template" type="text/x-handlebars-template">
+            <div class='{{classname}}'>
+                <img src ='{{img}}' alt=''>
+                <h3>{{title}}</h3>
+                <span class="author">{{name}}</span>
+                <span class="genre">{{genere}}</span>
+                <span class="year">{{anno}}</span>
+            </div>
+        </script>
+        <script src="assets/js/main.js" charset="utf-8"></script>
+    </body>
 </html>
