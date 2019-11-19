@@ -6,7 +6,6 @@ function callAjax() {
 	  console.log(dati);
 	//   per ogni object dentro l'array dati.response pusha il template clonato dentro il container #albums
 	  dati.response.forEach(z => {
-			var x = $("#template .msgsent").clone();
 			var sorgente = $("#hb-template").html();
 			var sorgDigerita = Handlebars.compile(sorgente);
 			var objRef = {classname: 'cd', img: z.poster, title:z.title ,name:z.author ,genere:z.genre ,anno:z.year };
@@ -15,8 +14,12 @@ function callAjax() {
 	  });
     },
     error: function() {}
-  });
-}
+  });//fine ajax
+
+} //fine funzione ajax
+
+
 $(document).ready(function() {
   callAjax();
-});
+
+}); //fine document
