@@ -34,6 +34,14 @@ header img {
     padding: 100px 0;
 }
 
+#albums{
+    position: relative;
+}
+#albums .zoom{
+    height: 680px;
+    background: rgb(108, 140, 172);
+    color: black;
+}
 .cd {
     display: flex;
     justify-content: flex-start;
@@ -46,6 +54,9 @@ header img {
     background: rgb(46, 58, 70);
     text-align: center;
     transition: all 2s;
+}
+cd:hover {
+    cursor: pointer;
 }
 
 .cd img {

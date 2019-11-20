@@ -5,6 +5,7 @@ function callAjax() {
     success: function(dati) {
 	  console.log(dati);
 	//   per ogni object dentro l'array dati.response pusha il template clonato dentro il container #albums
+	
 	  dati.response.forEach(z => {
 			var sorgente = $("#hb-template").html();
 			var sorgDigerita = Handlebars.compile(sorgente);
@@ -18,6 +19,27 @@ function callAjax() {
 } //fine funzione ajax
 $(document).ready(function() {
 
+	$(this).on('click', '.cd', function(){
+		if ($(this).hasClass('zoom')) {
+			$(this).removeClass('zoom');
+		}else{
+			$(this).siblings().removeClass('zoom');
+			$(this).addClass('zoom');
+
+			
+			// trying some changes to css
+			// $(this).find('.author').css({
+			// 	'font-size': '2em',
+			// 	'color': 'lightblue'
+			// });
+			// $(this).find('.year').css({
+			// 	'font-size': '2em',
+			// 	'color': 'lightblue'
+			// });
+			
+		}
+
+	});
 	$('select').on('change', function () {
 		var xGenere = $("option:selected", this);
 		var genere=xGenere.val();

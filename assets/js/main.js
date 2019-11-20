@@ -14,7 +14,7 @@ function callAjax() {
 	  });
     },
     error: function() {}
-  });//fine ajax
+  });//fine $.ajax
 
 } //fine funzione ajax
 
